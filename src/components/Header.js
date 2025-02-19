@@ -1,8 +1,8 @@
-// src/components/Header.js
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { BiBorderRadius } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   return (
@@ -16,6 +16,7 @@ const Header = () => {
           <Nav.Link as={Link} to="/nos-services">Nos Services</Nav.Link>
           <Nav.Link as={Link} to="/contact"><button>Nous rejoindre</button></Nav.Link>
         </Nav>
+        <ThemeToggle />
       </Navbar.Collapse>
     </Navbar>
   );

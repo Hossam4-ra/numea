@@ -1,4 +1,5 @@
 // src/components/Footer.js
+//new test
 import React from 'react';
 
 const Footer = () => {
