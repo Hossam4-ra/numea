@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import ThemeToggle from './ThemeToggle';
-import './Header.css'; 
+import './Header.css'; // Import the CSS file
 
 const Header = () => {
   return (
@@ -11,10 +11,9 @@ const Header = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/">Accueil</Nav.Link>
-          <Nav.Link as={Link} to="/a-propos">À Propos</Nav.Link>
-          <Nav.Link as={Link} to="/nos-services">Nos Services</Nav.Link>
-          <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+          <Nav.Link as={ScrollLink} to="accueil" smooth={true} duration={200} className="no-cursor">Accueil</Nav.Link>
+          <Nav.Link as={ScrollLink} to="nos-services" smooth={true} duration={200}>Nos Services</Nav.Link>
+          <Nav.Link as={ScrollLink} to="contact" smooth={true} duration={200}>Contact</Nav.Link>
         </Nav>
         <ThemeToggle />
       </Navbar.Collapse>
