@@ -6,18 +6,20 @@ import ThemeToggle from './ThemeToggle';
 import './Header.css'; // Import the CSS file
 
 const Header = () => {
-  const style={backgroundColor:"black",color:"white",borderRadius: "5px",padding:"5px"}
+  const color={color:"black" ,backgroundColor:"black"}
+  const mar={margin:"5px"}
+  const style={backgroundColor:"black",color:"white",borderRadius: "5px",margin:"5px"}
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand as={ScrollLink} to="accueil" smooth={true} duration={200} className="no-cursor">NUMEA</Navbar.Brand>
+    <Navbar style={color} expand="lg" className='text-light'>
+      <Navbar.Brand as={ScrollLink} to="accueil" smooth={true} style={mar} duration={200} className="no-cursor">NUMEA</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
 
-          <Nav.Link as={Link} to="/">Accueil</Nav.Link>
-          <Nav.Link as={Link} to="/a-propos">À Propos</Nav.Link>
-          <Nav.Link as={Link} to="/nos-services">Nos Services</Nav.Link>
-          <Nav.Link as={Link} to="/contact"><button style={style}>Nous rejoindre</button></Nav.Link>
+          <Nav.Link className='text-light' as={Link} to="/">Accueil</Nav.Link>
+          <Nav.Link className='text-light' as={Link} to="/a-propos">À Propos</Nav.Link>
+          <Nav.Link className='text-light' as={Link} to="/nos-services">Nos Services</Nav.Link>
+          <Nav.Link className='text-light' as={Link} to="/contact"><button style={style}>Nous rejoindre</button></Nav.Link>
 
           
         </Nav>
