@@ -16,7 +16,7 @@ const ThemeToggle = () => {
 
   return (
     <button onClick={toggleTheme} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-      {theme === 'light' ? <FaMoon size={20} /> : <FaSun size={20} />}
+      {theme === 'light' ? <FaMoon size={20} onClick={toggleTheme} /> : <FaSun size={20} onClick={toggleTheme} />}
     </button>
   );
 };

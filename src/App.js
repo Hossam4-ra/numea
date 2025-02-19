@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Accueil from './pages/Accueil';
@@ -13,12 +13,18 @@ const App = () => {
     <Router>
       <Header />
       <main>
-        <Routes>
-          <Route path="/" element={<Accueil />} />
-          <Route path="/a-propos" element={<APropos />} />
-          <Route path="/nos-services/*" element={<NosServices />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <section id="accueil">
+          <Accueil />
+        </section>
+        <section id="a-propos">
+          <APropos />
+        </section>
+        <section id="nos-services">
+          <NosServices />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
       <Footer />
     </Router>
