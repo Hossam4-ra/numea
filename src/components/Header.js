@@ -1,6 +1,7 @@
 // src/components/Header.js
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { BiBorderRadius } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
           <Nav.Link as={Link} to="/">Accueil</Nav.Link>
           <Nav.Link as={Link} to="/a-propos">À Propos</Nav.Link>
           <Nav.Link as={Link} to="/nos-services">Nos Services</Nav.Link>
-          <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+          <Nav.Link as={Link} to="/contact"><button>Nous rejoindre</button></Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
