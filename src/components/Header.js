@@ -8,7 +8,7 @@ import './Header.css'; // Import the CSS file
 const Header = () => {
   const color={color:"black" ,backgroundColor:"black"}
   const mar={margin:"5px"}
-  const style={backgroundColor:"black",color:"white",borderRadius: "5px",margin:"5px"}
+  const style={backgroundColor:"black",color:"white",borderRadius: "3px", borderRadiusColor:"black"}
   return (
     <Navbar style={color} expand="lg" className='text-light'>
       <Navbar.Brand as={ScrollLink} to="accueil" smooth={true} style={mar} duration={200} className="no-cursor">NUMEA</Navbar.Brand>
